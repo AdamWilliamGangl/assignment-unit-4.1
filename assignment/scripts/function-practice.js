@@ -109,8 +109,9 @@ console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
 function sumAll(array) {
   let sum = 0
   // TODO: loop to add items
-  for (x=0; x<array.length; x++) {
-    sum += array[x]}
+  for (x = 0; x < array.length; x++) {
+    sum += array[x]
+  }
   return sum;
 }
 console.log('Running sumAll - should say 15', sumAll([1, 2, 3, 4, 5]));
@@ -120,7 +121,16 @@ console.log('Running sumAll - should say 30', sumAll([2, 4, 6, 8, 10]));
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
-
+function positiveArray(array) {
+  let newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > 0) {
+      newArray.push(array[i]);
+    }
+  }
+  return newArray;
+}
+console.log('Running positiveArray - should read [1,2,3,4,5]', positiveArray([1, -1, 2, -2, 3, -3, 4, -4, 5, -5]))
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
