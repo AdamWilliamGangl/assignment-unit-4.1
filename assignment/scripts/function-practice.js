@@ -91,7 +91,15 @@ console.log('Running find - should say True', find(3, [3, 2, 3, 6, 3, 8, 2, 7]))
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+let str=string.split('');
+for (let i = 0; i < str.length; i++) {
+  if (letter == str[i]) {
+    return true;
+  }
+  else if (letter !== str[i]) {
+    return false;
+  }
+}
 }
 console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
 console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
