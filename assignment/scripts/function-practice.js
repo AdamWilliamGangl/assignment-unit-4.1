@@ -23,15 +23,23 @@ console.log(helloName('Tony'));
 
 
 // 3. Function to add two numbers together & return the result
-function addNumbers(firstNumber) {
+function addNumbers(firstNumber, secondNumber) {
   // return firstNumber + secondNumber;
+  let result = firstNumber + secondNumber;
+  return result;
 }
+console.log('Running addNumbers with 8 and 12', addNumbers(8, 12));
+console.log('Running addNumbers with 1 and 2', addNumbers(1, 2));
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree() {
+function multiplyThree(valueOne, valueTwo, valueThree) {
+  let sum = valueOne * valueTwo * valueThree;
+  return sum;
 
 }
+console.log('Running multiplyThree with 2, 3, 4', multiplyThree(2, 3, 4));
+console.log('Running multiplyThree with 5, 6, 7', multiplyThree(5, 6, 7));
 
 
 // 5. Function that will return true if a number is positive, 
