@@ -45,11 +45,11 @@ console.log('Running multiplyThree with 5, 6, 7', multiplyThree(5, 6, 7));
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
-  if (number > 0 )  {
+  if (number > 0) {
     return true;
   }
   else
-  return false;
+    return false;
 }
 // Call the function to test each outcome (true & false)
 console.log('isPositive - should say true', isPositive(801));
@@ -63,15 +63,27 @@ console.log('isPositive - should say false', isPositive(-3));
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast(array) {
+  return array[array.length - 1];
 
 }
+console.log('Running getLast - should say 9', getLast([3, 1, 4, 1, 5, 9]));
+console.log('Running getLast - should say 7', getLast([3, 2, 6, 3, 8, 2, 7]));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array) {
-
+  for (let i = 0; i < array.length; i++) {
+    if (value === array[i]) {
+      return true;
+    }
+    else if (value !== array[i]) {
+      return false;
+    }
+  }
 }
+console.log('Running find - should say False', find(1, [3, 2, 3, 6, 3, 8, 2, 7]));
+console.log('Running find - should say True', find(3, [3, 2, 3, 6, 3, 8, 2, 7]));
 
 // ----------------------
 // Stretch Goals
