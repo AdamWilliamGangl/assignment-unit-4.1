@@ -78,13 +78,11 @@ function find(value, array) {
     if (value === array[i]) {
       return true;
     }
-    else {
-      return false;
-    }
   }
+  return false;
 }
 console.log('Running find - should say False', find(1, [3, 2, 3, 6, 3, 8, 2, 7]));
-console.log('Running find - should say True', find(3, [3, 2, 3, 6, 3, 8, 2, 7]));
+console.log('Running find - should say True', find(3, [0, 2, 3, 6, 3, 8, 2, 7]));
 
 // ----------------------
 // Stretch Goals
