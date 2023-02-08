@@ -148,11 +148,24 @@ console.log('Running positiveArray - should read [1,2,3,4,5]', positiveArray([1,
 // Error checking for text strings or other invalid inputs is not required, only valid positive non-zero integers will be passed into the function.
 
 function narcissistic(num1) {
-  let newNarc = Array.from(num1);
-  let comparison = [];
+  let newNarc = Array.from(String(num1), Number); //Create a new array, splitting each digit of the input parameter
+  let comparison = []; //Create a new array to place the values from newNarc raised to the power of the Newnarc.length
+  let sum = 0; //Create a variable 'sum' for combining the values in the comparison array. This will be used to compare against the original input parameter
   for (let i = 0; i < newNarc.length; i++) {
-    comparison.push((newnarc[i] ^ newNarc.length))
+    comparison.push((newNarc[i] ** newNarc.length)) 
   }
-  return newNarc;
+  console.log('the value of the input number is', num1)
+  console.log('NewNarc is equal to', newNarc);
+  console.log('Comparison is equal to', comparison);
+  for (let x = 0; x < comparison.length; x++) {
+    sum += comparison[x]
+  }
+  console.log('The sum of the individual number, raised to the power of the number of digits is equal to', sum)
+  if (sum === num1) {
+    return true;
+  } else {
+    return false;
+  }
 }
-console.log('the new array should be 1,125,27', narcissistic(153)) 
+console.log('The result of the function is:', narcissistic(153))
+console.log('The result of the function is:', narcissistic(1652))
