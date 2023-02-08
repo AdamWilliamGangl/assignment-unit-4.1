@@ -152,7 +152,7 @@ function narcissistic(num1) {
   let comparison = []; //Create a new array to place the values from newNarc raised to the power of the Newnarc.length
   let sum = 0; //Create a variable 'sum' for combining the values in the comparison array. This will be used to compare against the original input parameter
   for (let i = 0; i < newNarc.length; i++) {
-    comparison.push((newNarc[i] ** newNarc.length)) 
+    comparison.push((newNarc[i] ** newNarc.length))
   }
   console.log('the value of the input number is', num1)
   console.log('NewNarc is equal to', newNarc);
