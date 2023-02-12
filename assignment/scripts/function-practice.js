@@ -89,7 +89,7 @@ console.log('Running find - should say True', find(3, [0, 2, 3, 6, 3, 8, 2, 7]))
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {
+function isFirstLetter(letter, string) { //After class realized I could have simplified this without making an array and simply searching index 0- but I decided to leave as-is so I could see my original logic.
   let str = string.split('');
   for (let i = 0; i < str.length; i++) {
     if (letter == str[i]) {
